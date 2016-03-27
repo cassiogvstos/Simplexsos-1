@@ -28,9 +28,9 @@ encontrar o maior valor possível para um total.
 
 # Expressão
 
-* Max Z = 3.x1 + 5.x2
+* Max Z = 3x1 + 5x2
 
 # Restrições
-x1 <= 4
-x2 <= 6
-3x1 + 2x2 <= 18
+* x1 <= 4
+* x2 <= 6
+* 3x1 + 2x2 <= 18
