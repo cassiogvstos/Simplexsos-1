@@ -11,9 +11,8 @@ Implementação do metodo Simplex
 
 ## Ferramentas
 
-* HHVM 3.12.1
-* Nginx 1.4.6
-* Laravel 5.2
+* Heroku
+* Ruby on Rails
 * Bootstrap 3.3.6
 
 ## Simplex
