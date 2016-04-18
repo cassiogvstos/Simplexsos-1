@@ -33,3 +33,9 @@ encontrar o maior valor possível para um total.
 * x1 <= 4
 * x2 <= 6
 * 3x1 + 2x2 <= 18
+
+# Changelog
+* Adicionado tratamento de erro quanto à formatação das expressões.
+
+# Informações adicionais
+* As restrições só aceitam "<=" como operador.

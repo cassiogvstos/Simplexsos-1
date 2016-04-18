@@ -172,6 +172,9 @@
                 })
                 .success(function(result) {
                     $('.result').html(result);
+                })
+                .fail(function(j, k, w) {
+                    $('.result').html('<div class="alert alert-danger"><p><strong>Não foi possível realizar o cálculo.</strong></p><p>&nbsp;</p><p>Lembre-se que as expressões e restrições devem estar com seus sinais separados, e.g.: <code>3x1 + 2x2</code> ou <code>5x1 + 11x2 <= 18</code>.</p></div>');
                 });
             });
         });
