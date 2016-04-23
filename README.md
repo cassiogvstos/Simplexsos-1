@@ -1,5 +1,7 @@
 # Simplex
 
+http://simplex-univem.herokuapp.com/
+
 **Projeto de Pesquisa Operacional** - 5º semestre BSI
 
 ### Integrantes
@@ -7,7 +9,9 @@
 1. Gustavo Marttos, RA 536202
 2. Jordana Nogueira, RA 542717
 
-Implementação do metodo Simplex
+## Simplex
+* O Método Simplex é um procedimento matricial usado para resolver os modelos de
+programação linear, visando buscar a solução ótima para o problema.
 
 ## Ferramentas
 
@@ -15,27 +19,33 @@ Implementação do metodo Simplex
 * Ruby on Rails
 * Bootstrap 3.3.6
 
-## Simplex
+## Guia de uso do Simplex
 
-O uso do Simplex permite que se encontre valores ideais em situações em
-que diversos aspectos precisam ser respeitados. Diante de um problema, são
-estabelecidas inequações que representam restrições para as variáveis.
-A partir daí, testa-se possibilidades de maneira a otimizar o resultado
-da forma mais rápida possível.
-O uso mais comum do Simplex é para se maximizar um resultado, ou seja,
-encontrar o maior valor possível para um total.
-
-# Expressão
-
+### Expressão
 * Max Z = 3x1 + 5x2
 
-# Restrições
-* x1 <= 4
-* x2 <= 6
-* 3x1 + 2x2 <= 18
+### Restrições
+Utilize os botões de '+' e '-' para adicionar ou remover as restrições.
+x1 <= 4
+x2 <= 6
+3x1 + 2x2 <= 18
 
-# Changelog
+### Apresentação do Resultado.
+Selecione a forma de apresentação do resultado, todas as iterações ou somente a tabela com o resultado final.
+
+### Clicando no Maximizar
+O resultado é apresentado após o calculo a solução ótima do problema de PL proposto.
+Se ao final do processo a solução não for ótima, é porque um dos pontos adjacentes fornece um valor
+maior que o inicial. 
+
+### Análise de Sensibilidade
+A Análise de Sensibilidade é uma análise pósotimização que busca verificar os efeitos causados
+ao PPL devido as possíveis variações (aumentando ou diminuindo) dos valores dos coeficientes das
+variáveis, tanto da função objetivo como nas restrições além das disponibilidades dos recursos
+mencionados nas restrições (termos constantes).
+
+## Changelog
 * Adicionado tratamento de erro quanto à formatação das expressões.
 
-# Informações adicionais
+## Informações adicionais
 * As restrições só aceitam "<=" como operador.
