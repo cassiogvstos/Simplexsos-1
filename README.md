@@ -10,7 +10,7 @@ http://simplex-univem.herokuapp.com/
 2. Jordana Nogueira, RA 542717
 
 ## Simplex
-* O Método Simplex é um procedimento matricial usado para resolver os modelos de
+O Método Simplex é um procedimento matricial usado para resolver os modelos de
 programação linear, visando buscar a solução ótima para o problema.
 
 ## Ferramentas
@@ -33,10 +33,10 @@ x2 <= 6
 ### Apresentação do Resultado.
 Selecione a forma de apresentação do resultado, todas as iterações ou somente a tabela com o resultado final.
 
-### Clicando no Maximizar
+### Maximizar / Minimizar
 O resultado é apresentado após o calculo a solução ótima do problema de PL proposto.
 Se ao final do processo a solução não for ótima, é porque um dos pontos adjacentes fornece um valor
-maior que o inicial. 
+maior que o inicial.
 
 ### Análise de Sensibilidade
 A Análise de Sensibilidade é uma análise pósotimização que busca verificar os efeitos causados
