@@ -26,9 +26,9 @@ programação linear, visando buscar a solução ótima para o problema.
 
 ### Restrições
 Utilize os botões de '+' e '-' para adicionar ou remover as restrições.
-x1 <= 4
-x2 <= 6
-3x1 + 2x2 <= 18
+* x1 <= 4
+* x2 <= 6
+* 3x1 + 2x2 <= 18
 
 ### Apresentação do Resultado.
 Selecione a forma de apresentação do resultado, todas as iterações ou somente a tabela com o resultado final.
