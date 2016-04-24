@@ -55,6 +55,11 @@ module Simplex
             end
 
             matrizes << sensibilidade(ultima_matriz, valores_restricao, folga_valores, variaveis_limite_restricao)
+
+            matrizes << variaveis_basicas(ultima_matriz)
+            matrizes << variaveis_nao_basicas(ultima_matriz)
+
+            return matrizes
         end
 
         def self.matriz(acao, expressao, restricoes = [])
@@ -75,6 +80,7 @@ module Simplex
             end
 
             @folgas = folgas.clone
+            @variaveis = variaveis.clone
 
             matriz = []
             matriz << ['Linha'] + variaveis + folgas + ['b']
@@ -274,6 +280,41 @@ module Simplex
             sensibilidade
         end
 
+        def self.variaveis_basicas(matriz = [])
+            basicas = []
+
+            basicas << ['Variável', 'Valor']
+
+            matriz[1...-1].each_with_index do |linha, idx|
+                basicas << [linha[0], linha[-1]]
+            end
+
+            basicas
+        end
+
+        def self.variaveis_nao_basicas(matriz = [])
+            basicas = variaveis_basicas(matriz)[1..-1]
+            nao_basicas = []
+
+            nao_basicas << ['Variável', 'Valor']
+
+            variaveis = @variaveis.clone
+            folgas = @folgas.clone
+
+            dentro = []
+
+            basicas.each_with_index do |basica, idx|
+                dentro << basica[0]
+            end
+
+            (variaveis + folgas).each do |el|
+                if ! dentro.include?(el)
+                    nao_basicas << [el, 0.to_f]
+                end
+            end
+
+            nao_basicas
+        end
     end
 
 end

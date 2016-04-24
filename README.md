@@ -46,7 +46,7 @@ mencionados nas restrições (termos constantes).
 
 ## To-do
 
-- [ ] Retornar variáveis básicas e não básicas.
+- [x] Retornar variáveis básicas e não básicas - _24/04/2016_;
 - [x] Opção de obter o resultado passo a passo ou somente o final - _24/04/2016_;
 - [x] Adicionado tratamento de erro quanto à formatação das expressões - _17/04/2016_.
 
