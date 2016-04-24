@@ -30,7 +30,7 @@ Utilize os botões de '+' e '-' para adicionar ou remover as restrições.
 * x2 <= 6
 * 3x1 + 2x2 <= 18
 
-### Apresentação do Resultado.
+### Apresentação do Resultado
 Selecione a forma de apresentação do resultado, todas as iterações ou somente a tabela com o resultado final.
 
 ### Maximizar / Minimizar
@@ -44,8 +44,11 @@ ao PPL devido as possíveis variações (aumentando ou diminuindo) dos valores d
 variáveis, tanto da função objetivo como nas restrições além das disponibilidades dos recursos
 mencionados nas restrições (termos constantes).
 
-## Changelog
-* Adicionado tratamento de erro quanto à formatação das expressões.
+## To-do
+
+- [ ] Retornar variáveis básicas e não básicas.
+- [x] Opção de obter o resultado passo a passo ou somente o final - _24/04/2016_;
+- [x] Adicionado tratamento de erro quanto à formatação das expressões - _17/04/2016_.
 
 ## Informações adicionais
 * As restrições só aceitam "<=" como operador.

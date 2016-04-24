@@ -1,29 +1,35 @@
-<%if @matriz[-1][-1][-1] == nil%>
-    <%= "Loop infinito." %>
-<%else%>
+<% if @matriz[-1][-1][-1] == nil %>
+    <div class="alert alert-danger divisor">
+        <p><strong>Não foi possível realizar o cálculo.</strong></p>
+        <p>&nbsp;</p>
+        <p>Retorno: loop infinito.</p>
+    </div>
+<% else %>
     <% @matriz.each_with_index do |matriz, idx| %>
-    <h4>
-        <%if idx == @matriz.size-1%>
-          <%= "Sensibilidade" %>
-        <%elsif idx == @matriz.size-2%>
-          <%= "Tabela final" %>
-        <%else%>
-          <%= "Tabela ##{idx+1}" %>
-        <%end%>
-    </h4>
-
-    <table class="table table-bordered">
-        <% matriz.each do |linha| %>
-          <tr>
-            <% linha.each_with_index do |e, i| %>
-              <% if e.class == Float %>
-                <td><%= e.round(3) %></td>
-              <%else%>
-                <td class="active"><%= e %></td>
-              <% end %>
+    <div class="divisor">
+        <h4>
+            <% if idx == @matriz.size-1 %>
+              <%= "Sensibilidade" %>
+            <% elsif idx == @matriz.size-2 %>
+              <%= "Tabela final" %>
+            <% else %>
+              <%= "Tabela ##{idx+1}" %>
             <% end %>
-          </tr>
-        <% end %>
-    </table>
+        </h4>
+
+        <table class="table table-bordered">
+            <% matriz.each do |linha| %>
+              <tr>
+                <% linha.each_with_index do |e, i| %>
+                  <% if e.class == Float %>
+                    <td><%= e.round(3) %></td>
+                  <% else %>
+                    <td class="active"><%= e %></td>
+                  <% end %>
+                <% end %>
+              </tr>
+            <% end %>
+        </table>
+    </div>
     <%end%>
 <%end%>

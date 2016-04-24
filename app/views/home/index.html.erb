@@ -68,13 +68,24 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-offset-4 col-md-8">
+                        <div class="col-md-5">
                             <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-default active">
                                     <input type="radio" checked="" autocomplete="off" name="acao" value="min"> Minimizar
                                 </label>
                                 <label class="btn btn-default">
                                     <input type="radio" autocomplete="off" name="acao" value="max"> Maximizar
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="btn-group pull-right" data-toggle="buttons">
+                                <label class="btn btn-default active">
+                                    <input type="radio" checked="" autocomplete="off" name="show_all" value="no"> Resultado Final
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" autocomplete="off" name="show_all" value="yes"> Passo a Passo
                                 </label>
                             </div>
                         </div>
@@ -148,7 +159,7 @@
                     restr = [];
 
                 if (maxvoltas <= 0) {
-                    $('.result').html($('<p />').addClass('lead text-muted').text('Informe um número de iterações.'));
+                    $('.result').html('<div class="alert alert-danger"><p><strong>Não foi possível realizar o cálculo.</strong></p><p>&nbsp;</p><p>Informe um número de iterações.</p></div>');
 
                     return;
                 }
@@ -171,7 +182,23 @@
                     }
                 })
                 .success(function(result) {
-                    $('.result').html(result);
+                    var res = $.parseHTML(result),
+                        show_all = $('[name="show_all"]:checked').val();
+
+                    if (show_all == 'yes') {
+                        $('.result').html(res);
+                    } else {
+                        var iterator = 0,
+                            tables = res.reverse().filter(function(e) {
+                                if ($(e).hasClass('divisor') && iterator < 2) {
+                                    iterator++;
+
+                                    return $(e);
+                                }
+                            }).reverse();
+
+                        $('.result').html(tables);
+                    }
                 })
                 .fail(function(j, k, w) {
                     $('.result').html('<div class="alert alert-danger"><p><strong>Não foi possível realizar o cálculo.</strong></p><p>&nbsp;</p><p>Lembre-se que as expressões e restrições devem estar com seus sinais separados, e.g.: <code>3x1 + 2x2</code> ou <code>5x1 + 11x2 <= 18</code>.</p></div>');
