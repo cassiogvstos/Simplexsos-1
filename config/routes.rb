@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   post '/simplex' => 'home#gerar_simplex'
 
+  get 'mochila' => 'mochila#index'
+
+  post '/mochila' => 'mochila#gerar_mochila'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
