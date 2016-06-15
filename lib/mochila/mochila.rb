@@ -5,44 +5,41 @@ module Mochila
             pesos = pesos.compact.reject(&:blank?)
             valores = valores.compact.reject(&:blank?)
 
-            @pesos_val = Hash[pesos.zip valores]
+            capacidade = capacidade.to_i
 
-            tabela = []
-
-            pesos_int = pesos.map do |peso|
+            pesos.map! do |peso|
                 peso.to_i
             end
 
-            (pesos_int.max + 1).times do |peso|
-                tabela << Array.new(capacidade.to_i + 1, 0)
+            valores.map! do |valor|
+                valor.to_i
             end
 
-            preencher_tabela(tabela)
+            pesos_val = pesos.zip valores
+
+            @pesos_v = pesos_val
+
+            tabela = [].tap { |m| (@pesos_v.size + 1).times { m << Array.new(capacidade + 1) } }
+
+            tabela[0].each_with_index { |valor, peso| tabela[0][peso] = 0 }
+
+            preencher_tabela(tabela, capacidade)
         end
 
-        def self.preencher_tabela(tabela)
-            tabela.each_with_index do |linha, peso|
-                linha.each_with_index do |item, i|
-                    if peso.to_i <= i.to_i
-                        valor = @pesos_val[peso.to_s].to_i
+        def self.preencher_tabela(tabela, capacidade)
+            @iterations = 0
 
-                        if peso == 0
-                            valor = 0
-                        elsif valor.nil?
-                            valor = tabela[peso - 1][i]
-                        elsif peso.to_i < i.to_i
-                            diferenca = i.to_i - peso.to_i
-                            valor = valor.to_i + tabela[peso - 1][diferenca].to_i
-                        end
+            (1..@pesos_v.size).each do |i|
+                peso, valor = @pesos_v[i - 1]
 
-                        if valor < tabela[peso - 1][i].to_i
-                            valor = tabela[peso - 1][i].to_i
-                        end
+                (0..capacidade).each do |x|
+                    @iterations = @iterations + 1;
+
+                    if peso > x
+                        tabela[i][x] = tabela[i - 1][x]
                     else
-                        valor = tabela[peso - 1][i]
+                        tabela[i][x] = [tabela[i - 1][x], tabela[i - 1][x - peso] + valor].max
                     end
-
-                    tabela[peso][i] = valor.to_s
                 end
             end
 
@@ -56,9 +53,8 @@ module Mochila
             resultado = []
 
             begin
-
                 if tabela[i][j] != tabela[i - 1][j]
-                    resultado << { i.to_s => @pesos_val[i.to_s] }
+                    resultado << @pesos_v[i - 1]
 
                     j -= i
                     i -= 1

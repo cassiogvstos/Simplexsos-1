@@ -4,9 +4,7 @@
 
         <ul>
             <% @resultado.each do |linha| %>
-                <% linha.each_with_index do |r, i| %>
-                    <li>Peso <strong class="text-success"><%= r.first %></strong> <strong>/</strong> Valor <strong class="text-success"><%= r.last %></strong></li>
-                <% end %>
+                <li>Peso <strong class="text-success"><%= linha[0] %></strong> <strong>/</strong> Valor <strong class="text-success"><%= linha[1] %></strong></li>
             <% end %>
         </ul>
     </div>

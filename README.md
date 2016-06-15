@@ -47,7 +47,6 @@ Além disso, há a liberação do aplicativo da Mochila, onde há um problema de
 
 ### Mochila
 
-* Não pode-se utilizar itens com pesos iguais;
 * Somente valores inteiros são permitidos
 
 ## Datas importantes
