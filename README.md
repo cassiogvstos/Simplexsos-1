@@ -87,8 +87,8 @@ Além disso, há a liberação do aplicativo da Mochila, onde há um problema de
 | Navegadores   | Google Chrome, Mozilla Firefox, Opera, Safari, Microsoft Edge e Internet Explorer 9+.     |
 | Sistemas Operacionais     | UNIX, Windows.    |
 
-| Tecnologias   ||
-|---------------||
+| Tecnologias   | Descrição |
+|:-------------:|-----------|
 | Front-end | HTML, CSS, Javascript |
 | Back-end  | Ruby  |
 | Frameworks    | Rails e Bootstrap     |
