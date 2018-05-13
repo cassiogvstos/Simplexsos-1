@@ -1,6 +1,6 @@
 # Simplex
 
-[Abrir aplicação online - Simplex](http://#simplexSOS-univem.herokuapp.com/#)
+[Abrir aplicação online - Simplex](http://simplex-univem.herokuapp.com)
 
 **Projeto de Pesquisa Operacional**
 
