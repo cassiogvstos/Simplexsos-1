@@ -1,6 +1,6 @@
 # SimplexSos
 
-[Abrir aplicação online - Simplex](http://simplex-univem.herokuapp.com)
+[Abrir aplicação online - Simplex](https://pacific-reef-76315.herokuapp.com/)
 
 **Projeto de Pesquisa Operacional**
 
