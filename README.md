@@ -1,15 +1,13 @@
-# Simplex e Mochila
+# SimplexSOS
 
 [Abrir aplicação online - Simplex](http://simplex-univem.herokuapp.com/)
 
-[Abrir aplicação online - Mochila](http://simplex-univem.herokuapp.com/mochila)
 
 **Projeto de Pesquisa Operacional** - 5º semestre BSI
 
 ### Integrantes
 
-1. Gustavo Marttos, RA 536202
-2. Jordana Nogueira, RA 542717
+
 
 ## Introdução
 Este documento provê uma visão geral da versão do aplicativo Simplex que está sendo liberada.
@@ -32,12 +30,6 @@ Além disso, há a liberação do aplicativo da Mochila, onde há um problema de
 * Possibilidade de mostrar passo a passo ou somente o resultado final;
 * Tratamento de erros quanto à expressões erradas ou loop infinito.
 
-### Mochila
-
-* Quantidade de itens ilimitada;
-* Tratamento de erros;
-* Apreentação da solução, dos itens a serem considerados e a tabela de cálculo.
-
 ## Problemas conhecidos e limitações
 
 ### Simplex
@@ -45,9 +37,7 @@ Além disso, há a liberação do aplicativo da Mochila, onde há um problema de
 * As restrições só aceitam "<=" como operador;
 * É necessário separar os sinais matemáticos das variáveis com um espaço para não causar erro de interpretação (`e.g.: 3x1 + 2x2`).
 
-### Mochila
 
-* Somente valores inteiros são permitidos
 
 ## Datas importantes
 
@@ -68,17 +58,6 @@ Além disso, há a liberação do aplicativo da Mochila, onde há um problema de
 | 24/04/2016    | Entrega da versão final do projeto.   |
 | 24/04/2016    | Projeto disponibilizado no ambiente de produção.  |
 | 29/04/2016    | Conclusão da wiki.    |
-
-
-### Mochila
-
-| Data  | Evento    |
-|:-----:|-----------|
-| 27/05/2016    | Início do projeto.   |
-| 28/05/2016    | Estrutura da aplicação reutilizada do Simplex.   |
-| 28/05/2016    | Aplicação base criada.   |
-| 28/05/2016    | Layout criado.   |
-| 28/05/2016    | Finalização da primeira versão.   |
 
 ## Compatibilidade
 
