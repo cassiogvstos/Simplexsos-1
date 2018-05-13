@@ -1,12 +1,15 @@
-# SimplexSOS
+# Simplex
 
-[Abrir aplicação online - Simplex](http://simplex-univem.herokuapp.com/)
+[Abrir aplicação online - Simplex](http://#simplexSOS-univem.herokuapp.com/#)
 
+**Projeto de Pesquisa Operacional**
 
-**Trabalho de Faculdade, Aula de Pesquisa Operacional** - 5º semestre BSI
+### Grupo
 
-### Integrantes
-
+1. Cassio Santos,    RA 538043
+2. Fabio Flauzino,   RA 558249
+3. Otoniel Mattoso,  RA 533084
+4. Ricardo Euclides, RA 557180
 
 
 ## Introdução
@@ -17,8 +20,7 @@ Por último são descritas as demandas e os problemas que foram resolvidos para 
 O Método Simplex é um procedimento matricial usado para resolver os modelos de
 programação linear, visando buscar a solução ótima para o problema.
 
-
-## Notas sobre versões
+## Nota de release
 
 ### Simplex
 
@@ -31,9 +33,10 @@ programação linear, visando buscar a solução ótima para o problema.
 
 ## Problemas conhecidos e limitações
 
+### Simplex
+
 * As restrições só aceitam "<=" como operador;
 * É necessário separar os sinais matemáticos das variáveis com um espaço para não causar erro de interpretação (`e.g.: 3x1 + 2x2`).
-
 
 ## Datas importantes
 
@@ -41,19 +44,12 @@ programação linear, visando buscar a solução ótima para o problema.
 
 | Data  | Evento    |
 |:-----:|-----------|
-| 10/03/2016    | Início do projeto.   |
-| 14/03/2016    | Análise de tecnologias.   |
-| 22/03/2016    | Início do desenvolvimento da aplicação.   |
-| 26/03/2016    | Realização dos primeiros testes.  |
-| 27/03/2016    | Continuação dos testes (ref. geração das matrizes)    |
-| 17/04/2016    | Estrutura da aplicação criada.    |
-| 17/04/2016    | Primeiros tratamentos de erros criados.   |
-| 23/03/2016    | Finalização da primeira versão.   |
-| 24/04/2016    | Criada opção de exibir passo a passo ou somente resultado final.  |
-| 24/04/2016    | Variáveis básicas e não básicas incluídas.    |
-| 24/04/2016    | Entrega da versão final do projeto.   |
-| 24/04/2016    | Projeto disponibilizado no ambiente de produção.  |
-| 29/04/2016    | Conclusão da wiki.    |
+| 26/04/2018    | Início do projeto e demonstração da proposta.   |
+| 10/05/2018    | Entrada de Dados Dinâmica & Layout do SimplexSOS.   |
+| 17/05/2018    | Solução PL Maximizar & Exibição de Resultado Final.   |
+| 24/05/2018    | Entrada de Dados Dinâmica & Solução PL Minimizar.  |
+| 07/06/2018	  | Controle de Interações & Analise de Sensibilidade & Tutorial para o usuário    |
+
 
 ## Compatibilidade
 
@@ -114,8 +110,6 @@ A Análise de Sensibilidade é uma análise pós-otimização que busca verifica
 ao PPL devido as possíveis variações (aumentando ou diminuindo) dos valores dos coeficientes das
 variáveis, tanto da função objetivo como nas restrições além das disponibilidades dos recursos
 mencionados nas restrições (termos constantes).
-
-## Guia de uso da Mochila
 
 ### Capacidade
 Informe como capacidade o número **4**.
