@@ -1,4 +1,4 @@
-# Simplex
+# SimplexSos
 
 [Abrir aplicação online - Simplex](http://simplex-univem.herokuapp.com)
 
