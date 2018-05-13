@@ -3,7 +3,7 @@
 [Abrir aplicação online - Simplex](http://simplex-univem.herokuapp.com/)
 
 
-**Projeto de Pesquisa Operacional** - 5º semestre BSI
+**Trabalho de Faculdade, Aula de Pesquisa Operacional** - 5º semestre BSI
 
 ### Integrantes
 
@@ -17,9 +17,8 @@ Por último são descritas as demandas e os problemas que foram resolvidos para 
 O Método Simplex é um procedimento matricial usado para resolver os modelos de
 programação linear, visando buscar a solução ótima para o problema.
 
-Além disso, há a liberação do aplicativo da Mochila, onde há um problema de otimização combinatória, que leva o mesmo nome. Possui como objetivo a mochila ter o maior valor possível, não ultrapassando o peso máximo dela.
 
-## Nota de release
+## Notas sobre versões
 
 ### Simplex
 
@@ -32,11 +31,8 @@ Além disso, há a liberação do aplicativo da Mochila, onde há um problema de
 
 ## Problemas conhecidos e limitações
 
-### Simplex
-
 * As restrições só aceitam "<=" como operador;
 * É necessário separar os sinais matemáticos das variáveis com um espaço para não causar erro de interpretação (`e.g.: 3x1 + 2x2`).
-
 
 
 ## Datas importantes
